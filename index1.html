@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password Strength Analyzer</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Password Analyzer</h1>
+
+        <p>
+            Check how strong your password is.
+        </p>
+
+        <input 
+            type="password" 
+            id="password"
+            placeholder="Enter password"
+        >
+
+        <button id="checkBtn">
+            Check Password
+        </button>
+
+
+        <h2 id="result">
+            Strength: 
+        </h2>
+
+
+        <div class="checks">
+
+            <p id="length">
+                ❌ At least 8 characters
+            </p>
+
+            <p id="upper">
+                ❌ Contains uppercase letter
+            </p>
+
+            <p id="number">
+                ❌ Contains a number
+            </p>
+
+            <p id="symbol">
+                ❌ Contains special character
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+<script src="script1.js"></script>
+
+</body>
+
+</html>
