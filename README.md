@@ -1,52 +1,95 @@
-# Password Strength Analyzer
+# Password Security Analyzer
 
-I built this project while learning JavaScript and basic cybersecurity concepts.
+A web-based Password Security Analyzer built with HTML, CSS, and JavaScript.
 
-The application checks whether a password follows common security recommendations such as minimum length, uppercase letters, numbers, and special characters. Based on these checks, it provides a simple strength rating.
+The application evaluates password strength using multiple security checks, calculates password entropy, and verifies whether a password has appeared in known data breaches using the Have I Been Pwned (HIBP) Passwords API.
 
 ## Features
 
-- Password strength analysis
-- Checks for minimum length
-- Checks for uppercase letters
-- Checks for numbers
-- Checks for special characters
-- Displays Weak, Medium, or Strong ratings
+* Password strength analysis
+* Minimum length validation
+* Uppercase letter detection
+* Number detection
+* Special character detection
+* Password entropy calculation
+* Security risk assessment
+* Real-world breach detection using the Have I Been Pwned API
+* Instant feedback and security recommendations
+
+## How It Works
+
+The analyzer evaluates passwords using several criteria:
+
+### Complexity Checks
+
+* At least 8 characters long
+* Contains uppercase letters
+* Contains numbers
+* Contains special characters
+
+### Entropy Calculation
+
+The application estimates password entropy based on character variety and password length.
+
+### Breach Detection
+
+Passwords are checked against the Have I Been Pwned Passwords database using the k-Anonymity model.
+
+This approach protects user privacy because:
+
+* The password itself is never transmitted.
+* Only the first 5 characters of the SHA-1 hash are sent.
+* The full comparison is performed locally in the browser.
+
+### Security Risk Assessment
+
+The application combines complexity checks, entropy calculations, and breach detection results to provide a security risk assessment.
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
+* HTML
+* CSS
+* JavaScript
+* Fetch API
+* Web Crypto API (SHA-1 Hashing)
+* Have I Been Pwned Passwords API
 
 ## What I Learned
 
 Through this project, I learned:
 
-- Basic DOM manipulation in JavaScript
-- Event handling using buttons and user input
-- Regular expressions (Regex)
-- Password security best practices
-- Building interactive web applications
+* DOM Manipulation
+* Event Handling
+* Regular Expressions (Regex)
+* Asynchronous JavaScript (Async/Await)
+* API Integration
+* Password Security Best Practices
+* SHA-1 Hashing
+* k-Anonymity Privacy Model
+* Browser-based Security Analysis
 
-## How the Strength Rating Works
+## Example Output
 
-The password is checked against four criteria:
+Password: password
 
-- At least 8 characters long
-- Contains an uppercase letter
-- Contains a number
-- Contains a special character
+* Strength: Weak
+* Entropy: 37.60 bits
+* Security Risk: Critical
+* Found in millions of known breaches
 
-Each satisfied condition increases the score.
+Password: AlBert@12345
 
-### Example
+* Strength: Strong
+* High entropy score
+* Not found in known breaches
+* Lower security risk
 
-| Password | Rating |
-|-----------|---------|
-| abc | Weak |
-| Albert123 | Medium |
-| AlBert@12345 | Strong |
+## Future Improvements
+
+* Password generation
+* Strength score visualization
+* Additional pattern detection
+* Dark mode support
 
 ## Author
 
