@@ -31,3 +31,17 @@ button {
 
     margin-top: 20px;
 }
+#entropy,
+#crackTime {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#warnings {
+    margin-top: 15px;
+    color: red;
+}
+#breachStatus {
+    font-weight: bold;
+    margin-top: 10px;
+}
