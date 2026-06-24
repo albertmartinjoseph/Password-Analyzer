@@ -4,6 +4,9 @@ A web-based Password Security Analyzer built with HTML, CSS, and JavaScript.
 
 The application evaluates password strength using multiple security checks, calculates password entropy, and verifies whether a password has appeared in known data breaches using the Have I Been Pwned (HIBP) Passwords API.
 
+# Live Demo
+https://password-analyzer.albertmartinjoseph.workers.dev/
+
 ## Features
 
 * Password strength analysis
